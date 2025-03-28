@@ -61,7 +61,7 @@ const [text,setText]=useState('');
     </div>
     <div className="container my-2" style={{color: props.mode === 'light' ? 'black' : 'white'}}>
         <h2>Your Text Summary</h2>
-        <p>{text.split(" ").length} words and {text.length} characters</p>
+        <p>{text.length>0?text.split(" ").length:0} words and {text.length} characters</p>
         <p>{0.008 * (text.split(" ").length)} Minutes Read</p>
         <h2>Preview</h2>
         <p>{text.length>0 ? text :"Enter something in the text box above to preview"}</p>

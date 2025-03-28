@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import { useState } from 'react';
 import './App.css';
-// import About from './components/About';
+import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
@@ -26,11 +26,22 @@ setTimeout(()=>{
       setMode('dark');
       document.body.style.backgroundColor='grey';
 showAlert("Dark Mode has been enabled","success");
+document.title="TextUtils - Dark Mode";
     }
     else{
       setMode('light');
       document.body.style.backgroundColor='white';
       showAlert("Light Mode has been enabled","success");
+document.title="TextUtils - Light Mode";
+//to grab the attention for evil cause
+
+// setInterval(()=>{
+//   document.title="TextUtils is Amazing";
+// },2000)
+// setInterval(()=>{
+//   document.title="Install TextUtils now";
+// },1500)
+
     }
   }
 
@@ -42,7 +53,7 @@ showAlert("Dark Mode has been enabled","success");
   <Alert alert={alert}/>
  <div className="container my-3" >
  <TextForm showAlert={showAlert} heading="Enter the text to analyse below" mode={mode}/>
- {/* <About/> */}
+<About/>
  </div>
 </>
 
